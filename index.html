@@ -217,14 +217,6 @@
   }
   .about-avatar-initials {
     font-size: 5rem; font-weight: 800; font-family: 'Syne', sans-serif;
- .profile-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 24px;
-  position: relative;
-  z-index: 1;
-}
     background: linear-gradient(135deg, var(--ice), var(--blue-bright));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     z-index: 1;
@@ -236,6 +228,14 @@
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out; mask-composite: exclude;
   }
+  .about-photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  position: relative;
+  z-index: 1;
+}
   .about-chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
   .about-chip {
     background: rgba(38,120,228,0.12); border: 1px solid rgba(126,200,248,0.2);
@@ -529,7 +529,7 @@
     <div class="about-avatar-wrap reveal">
       <div class="about-avatar">
         <div class="about-avatar-ring"></div>
-        <img src="khushi.jpg" alt="Khushi Pal" class="profile-img">
+        <img src="khushi.jpg" alt="Khushi Pal" class="about-photo">
       </div>
       <div class="about-chip-row">
         <span class="about-chip">📍 Mumbai, MH</span>
