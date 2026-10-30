@@ -680,7 +680,7 @@
         <div class="project-links">
           <a href="https://github.com/palkhushi7898-lab/data-analyst-portfolio/raw/main/spotify.pbix" 
 class="project-link link-github">⭐Download PBIX</a>
-          <a href="#" class="project-link link-demo">🔗 Live Demo</a>
+         
         </div>
       </div>
     </div>
@@ -705,7 +705,6 @@ class="project-link link-github">⭐Download PBIX</a>
         </div>
         <div class="project-overlay">
           <a href="#" class="btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem">GitHub ↗</a>
-          <a href="#" class="btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem">Live Demo</a>
         </div>
       </div>
       <div class="project-body">
@@ -720,14 +719,106 @@ class="project-link link-github">⭐Download PBIX</a>
         <div class="project-links">
         <a href="https://github.com/palkhushi7898-lab/data-analyst-portfolio/raw/main/blinkit.pbix" 
 class="project-link link-github">⭐ Download PBIX</a>
-          <a href="#" class="project-link link-demo">🔗 Live Demo</a>
+          
         </div>
       </div>
     </div>
+    <!-- Project 3: TaskFlow -->
+
+<div class="project-card reveal" style="transition-delay:0.2s">
+
+    <div class="project-img" style="background: linear-gradient(135deg, #17142e 0%, #0a1628 100%);">
+
+        <div class="project-img-inner">
+
+            <div class="mock-dash" style="border-color:rgba(126,200,248,0.25);">
+
+                <div style="color:#7ec8f8;font-family:Syne,sans-serif;font-weight:800;font-size:0.85rem;margin-bottom:0.7rem;">
+                    ✓ TaskFlow Dashboard
+                </div>
+
+                <div class="mock-row">
+                    <div class="mock-kpi">
+                        <div class="mock-kpi-val">12</div>
+                        <div class="mock-kpi-lbl">Total Tasks</div>
+                    </div>
+
+                    <div class="mock-kpi">
+                        <div class="mock-kpi-val">05</div>
+                        <div class="mock-kpi-lbl">In Progress</div>
+                    </div>
+
+                    <div class="mock-kpi">
+                        <div class="mock-kpi-val">07</div>
+                        <div class="mock-kpi-lbl">Completed</div>
+                    </div>
+                </div>
+
+                <div style="color:#b8e0fc;font-size:0.65rem;margin-bottom:0.5rem;">
+                    Task Management Overview
+                </div>
+
+                <div class="mock-bars">
+                    <div class="mock-b" style="width:90%;background:linear-gradient(90deg,#2678e4,#7ec8f8);"></div>
+                    <div class="mock-b" style="width:70%;background:linear-gradient(90deg,#2678e4,#7ec8f8);"></div>
+                    <div class="mock-b" style="width:50%;background:linear-gradient(90deg,#2678e4,#7ec8f8);"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="project-overlay">
+            <a href="http://127.0.0.1:5500/index.html"
+               target="_blank"
+               class="btn-primary"
+               style="font-size:0.78rem;padding:0.5rem 1rem;">
+                Live Demo ↗
+            </a>
+        </div>
+
+    </div>
+
+    <div class="project-body">
+
+        <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Local Storage</span>
+        </div>
+
+        <div class="project-title">
+            TaskFlow – Task Management Web Application
+        </div>
+
+        <p class="project-desc">
+            A task management web application designed to organize daily activities.
+            Features include a dashboard, task creation, status tracking, calendar,
+            completed tasks, profile settings and light/dark theme preferences.
+        </p>
+
+        <div class="project-links">
+            <a href="#" class="project-link link-github">
+                ⭐ GitHub
+            </a>
+
+            <a href="http://127.0.0.1:5500/index.html"
+               target="_blank"
+               class="project-link link-demo">
+                🔗 Live Demo
+            </a>
+        </div>
+
+    </div>
+
+</div>
 
    
    
 </section>
+  
+
+
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
@@ -868,76 +959,6 @@ class="project-link link-github">⭐ Download PBIX</a>
   </div>
 </footer>
 
-<script>
-  // Hamburger
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.getElementById('nav');
-  hamburger.addEventListener('click', () => nav.classList.toggle('open'));
 
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.12 });
-  revealEls.forEach(el => obs.observe(el));
-
-  // Skill bars on scroll
-  const skillBars = document.querySelectorAll('.skill-bar-fill');
-  const barObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.width = e.target.dataset.width + '%';
-        barObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  skillBars.forEach(bar => barObs.observe(bar));
-
-  // Counter animation
-  function animateCounter(el, target, duration = 1500) {
-    let start = 0;
-    const step = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) { el.textContent = target + '+'; clearInterval(timer); }
-      else el.textContent = Math.floor(start) + '+';
-    }, 16);
-  }
-  const counterEls = document.querySelectorAll('[data-count]');
-  const counterObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target, parseInt(e.target.dataset.count));
-        counterObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  counterEls.forEach(el => counterObs.observe(el));
-
-  // Contact form
-  function handleContactSubmit(btn) {
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = 'linear-gradient(135deg,#1a8040,#20a050)';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = 'Send Message →';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3000);
-  }
-
-  // Nav active highlight on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
-    });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--ice)' : '';
-    });
-  }, { passive: true });
-</script>
 </body>
 </html>
