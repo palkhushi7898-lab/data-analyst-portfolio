@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">f
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khushi Pal — Data Analyst Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1005,30 +1005,7 @@ class="project-link link-github">⭐ Download PBIX</a>
   }, { threshold: 0.5 });
   counterEls.forEach(el => counterObs.observe(el));
 
-  // Contact form
-  function handleContactSubmit(btn) {
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = 'linear-gradient(135deg,#1a8040,#20a050)';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = 'Send Message →';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3000);
-  }
-
-  // Nav active highlight on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
-    });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--ice)' : '';
-    });
-  }, { passive: true });
+  
 </script>
 </body>
 </html>
